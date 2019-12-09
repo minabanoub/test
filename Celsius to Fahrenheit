@@ -1,0 +1,23 @@
+import time
+grade = input ("Enter the grade symobl, C or F: ")
+grade_list = ["c","C","f","F"]
+temp = float()
+def ctof (temp):
+  return temp * 9/5 + 32
+def ftoc (temp):
+  return ((temp - 32 )*5) /9
+if grade not in grade_list:
+  print ("your grading system is wrong, program will exit, start over")
+  exit()
+else:
+  print ("You are good to go")
+  time.sleep(1)
+  if grade == "c"  or grade == "C":
+    temp = float (input("Enter the teperature measured in Celsius : "))
+    time.sleep(1)
+    print ("Your temperature in Fehrenheit is:", ctof(temp))
+  else:
+    grade == "f" or grade == "F"
+    temp = float (input("Enter the teperature measured in Fehrenheit : "))
+    time.sleep(1)
+    print ("Your temperature in Celsius is: ", ftoc(temp))
